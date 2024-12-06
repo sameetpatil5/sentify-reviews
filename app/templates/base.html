@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentify Reviews</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Sentify Reviews</a>
+    </nav>
+    <main class="flex-grow-1 py-4">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="text-center mt-4 text-muted">
+        &copy; 2024 Sentify Reviews. All rights reserved.
+    </footer>
+</body>
+
+</html>

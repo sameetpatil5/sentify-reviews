@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Sentify Reviews</h1>
+    <p class="text-center text-muted">Analyze customer reviews and gain valuable insights!</p>
+
+    <form method="POST" class="mt-4">
+        <div class="form-group">
+            <label for="reviews">Enter Reviews:</label>
+            <textarea class="form-control" id="reviews" name="reviews" rows="5"
+                placeholder="Type or paste customer reviews here..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block mt-3">Analyze</button>
+    </form>
+
+    {% if result %}
+    <div class="mt-4">
+        <h4 class="text-center">Analysis Result:</h4>
+        <p class="text-center font-weight-bold text-success">{{ result }}</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
